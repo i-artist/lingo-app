@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "桌面单词 | 把背单词放回你的桌面",
+  title: "桌面单词 | 桌面悬浮单词学习软件",
   description:
-    "桌面单词是一款常驻桌面的英语记忆工具，支持 Windows 和 macOS 下载。",
+    "桌面单词是一款桌面学习单词软件，支持轻巧悬浮、英文中文自动滚动显示、中英文发音、多主题和悬浮卡片配置。",
 };
 
 export default function RootLayout({

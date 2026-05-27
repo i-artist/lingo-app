@@ -2,23 +2,23 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "桌面即学",
-    text: "单词以轻量浮窗停在桌面边缘，不打断写代码、看文档或刷题的节奏。",
+    title: "轻巧悬浮",
+    text: "单词卡片常驻桌面，自动滚动展示英文和中文释义，不用打开学习软件也能持续看到。",
   },
   {
-    title: "记忆节拍",
-    text: "按熟悉度安排复现频率，高频错词会更常出现，已经掌握的词自动退场。",
+    title: "中英朗读",
+    text: "支持英文、中文和双语自动发音，看到单词的同时听到读音，把视觉记忆和听觉记忆连起来。",
   },
   {
-    title: "语境提示",
-    text: "每个词配一句短句和中文释义，避免只背拼写却忘了怎么用。",
+    title: "个性配置",
+    text: "主题、透明度、字号、显示区域、停留时间都能调，让悬浮卡片贴合你的屏幕和学习习惯。",
   },
 ];
 
 const stats = [
-  { value: "7s", label: "一次微复习" },
-  { value: "0", label: "切换成本" },
-  { value: "2", label: "平台下载" },
+  { value: "0", label: "学习切换成本" },
+  { value: "2", label: "中英自动发音" },
+  { value: "4+", label: "悬浮卡片配置" },
 ];
 
 export default function Home() {
@@ -63,14 +63,14 @@ export default function Home() {
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#f7c2a4] bg-white/70 px-4 py-2 text-sm font-semibold text-[#bf5a38] shadow-sm">
               <span className="h-2 w-2 rounded-full bg-[#f36f4f]" />
-              把背单词放回你的桌面
+              桌面上的单词学习助手
             </div>
             <h1 className="text-5xl font-semibold leading-[1.02] tracking-[-0.055em] text-[#24130c] sm:text-6xl lg:text-7xl">
-              每次抬眼，
-              <span className="block text-[#ef704e]">都多记住一个词。</span>
+              让单词，
+              <span className="block text-[#ef704e]">自然出现在桌面上</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#6f4634] sm:text-xl">
-              桌面单词是一款常驻桌面的英语记忆工具。它用轻量浮窗、短句语境和错词复现，把碎片时间变成稳定的词汇增长。
+              桌面单词是一款桌面学习单词软件。它用轻巧悬浮卡片自动滚动显示英文和中文释义，支持中英文自动发音，让你在工作、阅读、写代码的间隙顺手记单词。
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -106,57 +106,17 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl">
-            <div className="absolute inset-8 rounded-[3rem] bg-[#f36f4f]/20 blur-3xl" />
-            <div className="relative rounded-[2.5rem] border border-white/80 bg-white/70 p-4 shadow-[0_30px_90px_rgba(127,61,29,0.22)] backdrop-blur-2xl">
-              <div className="rounded-4xl bg-[#21120d] p-4 text-white shadow-inner">
-                <div className="mb-5 flex items-center justify-between">
-                  <div className="flex gap-2">
-                    <span className="h-3 w-3 rounded-full bg-[#ff775e]" />
-                    <span className="h-3 w-3 rounded-full bg-[#ffbd78]" />
-                    <span className="h-3 w-3 rounded-full bg-[#fff1df]" />
-                  </div>
-                  <span className="text-xs font-medium text-white/45">Desk Mode</span>
-                </div>
-
-                <div className="relative overflow-hidden rounded-3xl bg-[#fff5ec] p-5 text-[#24130c]">
-                  <div className="absolute right-4 top-4 rounded-full bg-[#ef704e]/10 px-3 py-1 text-xs font-semibold text-[#ef704e]">
-                    今日第 18 个
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <Image
-                      src="/icon.png"
-                      alt=""
-                      width={64}
-                      height={64}
-                      className="rounded-3xl"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold text-[#bf5a38]">正在复习</p>
-                      <h2 className="mt-1 text-4xl font-semibold tracking-[-0.04em]">
-                        wander
-                      </h2>
-                    </div>
-                  </div>
-                  <p className="mt-5 text-base leading-7 text-[#6f4634]">
-                    to walk slowly around without a clear direction
-                  </p>
-                  <p className="mt-3 rounded-2xl bg-white px-4 py-3 text-sm font-medium text-[#7a5242]">
-                    例句：I like to wander through the city after work.
-                  </p>
-                </div>
-
-                <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                  {["认识", "模糊", "忘了"].map((item) => (
-                    <button
-                      key={item}
-                      className="rounded-2xl border border-white/10 bg-white/8 px-4 py-3 text-sm font-semibold text-white/80 transition hover:bg-white/15"
-                    >
-                      {item}
-                    </button>
-                  ))}
-                </div>
-              </div>
+          <div className="relative mx-auto w-full max-w-xl lg:max-w-2xl">
+            <div className="absolute inset-8 rounded-[3rem] bg-[#f36f4f]/25 blur-3xl" />
+            <div className="relative rotate-1 rounded-[2.5rem] border border-white/80 bg-white/65 p-3 shadow-[0_30px_90px_rgba(127,61,29,0.22)] backdrop-blur-2xl transition hover:rotate-0">
+              <Image
+                src="/promo/floating-word.png"
+                alt="桌面单词浮窗展示，显示英文单词 transfer 和中文释义"
+                width={1024}
+                height={683}
+                priority
+                className="h-auto w-full rounded-4xl object-cover"
+              />
             </div>
           </div>
         </section>
@@ -168,11 +128,11 @@ export default function Home() {
                 Features
               </p>
               <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-                不抢注意力，只在你刚好能记住的时候出现。
+                不需要专门打开 App，单词会在桌面上自己出现。
               </h2>
             </div>
             <p className="max-w-md text-base leading-7 text-[#6f4634]">
-              它不是又一个需要打开的学习 App，而是桌面上的小提示器。看见、判断、继续工作。
+              桌面单词把学习拆成很小的一眼：看到英文、理解中文、听到发音，然后继续手上的事。
             </p>
           </div>
 
@@ -192,6 +152,57 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="relative z-10 py-10 sm:py-16" aria-labelledby="screens-title">
+          <div className="mb-8 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ef704e]">
+              Product Screens
+            </p>
+            <h2
+              id="screens-title"
+              className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl"
+            >
+              从显示到朗读，都为桌面碎片学习设计。
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[#6f4634]">
+              你可以控制浮窗大小、停留时间、背景透明度、中文延迟和朗读模式。想专注时隐藏，想复习时继续滚动。
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
+            <article className="rounded-[2.5rem] border border-white/80 bg-white/65 p-3 shadow-[0_24px_70px_rgba(127,61,29,0.14)] backdrop-blur">
+              <Image
+                src="/promo/settings-panel.png"
+                alt="桌面单词设置面板，包含停留时间、字号、透明度和显示区域配置"
+                width={1024}
+                height={683}
+                className="h-auto w-full rounded-4xl object-cover"
+              />
+              <div className="p-5">
+                <h3 className="text-xl font-semibold tracking-[-0.02em]">悬浮卡片按你习惯显示</h3>
+                <p className="mt-2 text-sm leading-6 text-[#6f4634]">
+                  停留时间、字号、透明度、中文延迟和显示区域都能配置，适合横屏、竖屏和不同工作区。
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-[2.5rem] border border-white/80 bg-white/65 p-3 shadow-[0_24px_70px_rgba(127,61,29,0.14)] backdrop-blur lg:mt-16">
+              <Image
+                src="/promo/menu-controls.png"
+                alt="桌面单词托盘菜单，包含隐藏浮窗、播放控制、朗读、主题和词库入口"
+                width={1024}
+                height={683}
+                className="h-auto w-full rounded-4xl object-cover"
+              />
+              <div className="p-5">
+                <h3 className="text-xl font-semibold tracking-[-0.02em]">菜单栏随手控制学习节奏</h3>
+                <p className="mt-2 text-sm leading-6 text-[#6f4634]">
+                  暂停播放、上一条、下一条、朗读语言、主题和词库都在菜单里，不打断当前工作。
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section
           id="workflow"
           className="relative z-10 my-10 grid gap-6 rounded-[2.5rem] bg-[#24130c] p-6 text-white shadow-[0_28px_80px_rgba(36,19,12,0.24)] md:grid-cols-[0.8fr_1.2fr] md:p-10"
@@ -201,11 +212,16 @@ export default function Home() {
               Workflow
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              三步，把词汇塞进日常。
+              四步，把碎片时间变成单词时间。
             </h2>
           </div>
           <div className="grid gap-3">
-            {["导入词库或错词本", "设置浮窗位置和出现频率", "用认识、模糊、忘了完成复习闭环"].map(
+            {[
+              "选择你的词库或学习内容",
+              "设置悬浮卡片的主题、大小和透明度",
+              "开启英文、中文或双语自动朗读",
+              "让单词在桌面自动滚动，利用碎片时间反复熟悉",
+            ].map(
               (step, index) => (
                 <div
                   key={step}
@@ -242,7 +258,7 @@ export default function Home() {
                 现在下载桌面单词
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-[#6f4634]">
-                支持 Windows 和 macOS。把安装包放入 `public/downloads` 后，下面的按钮会直接下载对应版本。
+                支持 Windows 和 macOS。安装后让单词卡片常驻桌面，在日常使用电脑时自动滚动学习。
               </p>
             </div>
 
@@ -259,7 +275,7 @@ export default function Home() {
                   下载 .exe 安装包
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#6f4634]">
-                  适用于 Windows 10 及以上版本，安装后可设置开机启动。
+                  适用于 Windows 10 及以上版本，支持桌面悬浮、自动滚动和中英文朗读。
                 </p>
                 <span className="mt-6 inline-flex font-semibold text-[#24130c] transition group-hover:text-[#ef704e]">
                   获取 Windows 版 →
@@ -278,7 +294,7 @@ export default function Home() {
                   下载 .dmg 安装包
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#6f4634]">
-                  适用于 Apple Silicon 与 Intel Mac，拖入应用程序即可使用。
+                  适用于 Apple Silicon 与 Intel Mac，菜单栏常驻，随时暂停、朗读或切换主题。
                 </p>
                 <span className="mt-6 inline-flex font-semibold text-[#24130c] transition group-hover:text-[#ef704e]">
                   获取 macOS 版 →
