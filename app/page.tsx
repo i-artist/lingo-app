@@ -75,7 +75,7 @@ export default function Home() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
-                href="/downloads/desktop-words-mac.dmg"
+                href="/downloads/DesktopWords.dmg"
                 download
                 className="group flex items-center justify-center gap-3 rounded-2xl bg-[#ef704e] px-6 py-4 text-base font-semibold text-white shadow-[0_18px_40px_rgba(239,112,78,0.35)] transition hover:-translate-y-1 hover:bg-[#e45f40]"
               >
@@ -83,7 +83,7 @@ export default function Home() {
                 <span className="transition group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="/downloads/desktop-words-windows.exe"
+                href="/downloads/desktopword-win32-x64-1.0.0.zip"
                 download
                 className="flex items-center justify-center rounded-2xl border border-[#f0b591] bg-white/70 px-6 py-4 text-base font-semibold text-[#24130c] shadow-[0_16px_34px_rgba(127,61,29,0.12)] transition hover:-translate-y-1 hover:border-[#ef704e] hover:bg-white"
               >
@@ -264,7 +264,7 @@ export default function Home() {
 
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <a
-                href="/downloads/desktop-words-windows.exe"
+                href="https://7mqu4ykm7z9h0uq5.public.blob.vercel-storage.com/desktopword-win32-x64-1.0.0.zip"
                 download
                 className="group rounded-4xl border border-[#f0b591] bg-white p-6 text-left transition hover:-translate-y-1 hover:border-[#ef704e] hover:shadow-[0_18px_44px_rgba(127,61,29,0.16)]"
               >
@@ -283,7 +283,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/downloads/desktop-words-mac.dmg"
+                href="https://7mqu4ykm7z9h0uq5.public.blob.vercel-storage.com/DesktopWords.dmg"
                 download
                 className="group rounded-4xl border border-[#f0b591] bg-white p-6 text-left transition hover:-translate-y-1 hover:border-[#ef704e] hover:shadow-[0_18px_44px_rgba(127,61,29,0.16)]"
               >
@@ -294,7 +294,7 @@ export default function Home() {
                   下载 .dmg 安装包
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#6f4634]">
-                  适用于 Apple Silicon 与 Intel Mac，菜单栏常驻，随时暂停、朗读或切换主题。
+                  适用于 Apple Silicon，菜单栏常驻，随时暂停、朗读或切换主题。
                 </p>
                 <span className="mt-6 inline-flex font-semibold text-[#24130c] transition group-hover:text-[#ef704e]">
                   获取 macOS 版 →
